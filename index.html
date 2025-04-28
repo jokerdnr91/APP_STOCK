@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Gestion de Stock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Gestion de Stock - Dashboard</h1>
+</header>
+
+<nav>
+  <button onclick="showSection('store')">Store</button>
+  <button onclick="showSection('stock')">Stock Réel</button>
+  <button onclick="showSection('consommation')">Consommation</button>
+  <button onclick="showSection('employes')">Employés</button>
+</nav>
+
+<main>
+  <!-- Store Section -->
+  <section id="store" class="active">
+    <h2>Store (Stock de base)</h2>
+    <div class="form-inline">
+      <input id="newStoreName" placeholder="Produit">
+      <input id="newStoreQty" type="number" placeholder="Quantité">
+      <button onclick="addStore()">Ajouter</button>
+    </div>
+    <table id="storeTable">
+      <tr><th>Produit</th><th>Quantité</th><th>Action</th></tr>
+    </table>
+  </section>
+
+  <!-- Stock Section -->
+  <section id="stock">
+    <h2>Stock Réel</h2>
+    <button onclick="syncStock()">Synchroniser avec Store</button>
+    <table id="stockTable">
+      <tr><th>Produit</th><th>Quantité</th></tr>
+    </table>
+  </section>
+
+  <!-- Consommation Section -->
+  <section id="consommation">
+    <h2>Consommation</h2>
+    <div class="form-inline">
+      <input id="consumeName" placeholder="Produit">
+      <input id="consumeQty" type="number" placeholder="Quantité utilisée">
+      <button onclick="consumeStock()">Consommer</button>
+    </div>
+    <h3>Historique :</h3>
+    <ul id="historyList"></ul>
+  </section>
+
+  <!-- Employés Section -->
+  <section id="employes">
+    <h2>Employés</h2>
+    <div class="form-inline">
+      <input id="newEmployeName" placeholder="Nom employé">
+      <button onclick="addEmploye()">Ajouter Employé</button>
+    </div>
+    <table id="employeTable">
+      <tr><th>Nom</th><th>Action</th></tr>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <p>App locale - Rappel automatique à 23h45</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
