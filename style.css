@@ -1,0 +1,100 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #4CAF50;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+/* Navigation */
+nav {
+  background: #333;
+  display: flex;
+  justify-content: center;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+nav button:hover {
+  background: #555;
+}
+
+/* Main */
+main {
+  padding: 20px;
+}
+
+/* Sections */
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+/* Form Inline */
+.form-inline {
+  margin-bottom: 15px;
+}
+
+.form-inline input, .form-inline button {
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #f1f1f1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #eee;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+}
